@@ -5,7 +5,7 @@
   <meta name="description" content="我知道我无法惊艳谁的一生，但我想温柔你的岁月。|关键词：Suinian,Nianbroken" /> 
   <meta charset="utf-8" /> 
   <meta http-equiv="content-language" content="zh-cn" /> 
-  <link rel="shortcut icon" href="images/favicon.jpg" />  
+  <link rel="shortcut icon" href="images/favicon.jpg" />   
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />   
   <link rel="stylesheet" href="assets/css/main.css" /> 
   <noscript> 
@@ -63,7 +63,7 @@
     <p class="copyright">您的IP：<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script type="text/javascript">document.write(returnCitySN["cip"])</script></p>   
     <p class="copyright"><script>
 		var mydate = new Date();
-		document.writeln("Copyright&nbsp;&copy;&nbsp;2021 - "+mydate.getFullYear()+'&nbsp;by 小白^卟白 @ All&nbsp;Rights&nbsp;Reserved');</script></p> 
+		document.writeln("Copyright&nbsp;&copy;&nbsp;2021 - "+mydate.getFullYear()+'&nbsp;by 小白^卟白 @ All&nbsp;Rights&nbsp;Reserved');</script></p>  
 	<p class="copyright">为往圣继绝学 为万世开太平！</p> 
     <p class="copyright"> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1691617546&amp;site=qq&amp;menu=yes"> <img src="images\svg\qq.svg" width="30" alt="QQ" title="QQ" />&nbsp;&nbsp;</a> <a target="_blank" href="mailto:hy8527491@gmail.com"> <img src="images\svg\mail.svg" width="30" alt="Mail" title="Mail" />&nbsp;&nbsp;</a> <a target="_blank" href="https://img01.anheyu.com/useruploads/156/2023/07/23/64bcc07a52d67.png"> <img src="images\svg\money_receiving_QR_code.svg" width="30" alt="赞赏支持" title="赞赏支持" />&nbsp;&nbsp;</a> <a target="_blank" href="https://github.com/hygge666"> <img src="images\svg\github.svg" width="30" alt="Github" title="Github" />&nbsp;&nbsp;</a> <a target="_blank" href="https://gitee.com/lixinyuanqi"> <img src="images\svg\gitee.svg" width="30" alt="Gitee" title="Gitee" />&nbsp;&nbsp;</a> <a target="_blank" href="https://juejin.cn/user/1058193111787420"> <img src="images\svg\coolapk.svg" width="30" alt="juejin" title="juejin" /></a> </p>  
 
@@ -259,7 +259,7 @@ void main(void) {
     
     float r;
     if(flwrp.x < 0.0) {
-        r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.36, 0.96) * 0.5);
+        r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.36, 0.96) * 0.5); 
     }
     else {
         r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.58, 0.96) * 0.5);
@@ -490,7 +490,7 @@ Matrix44.loadLookAt = function (m, vpos, vlook, vup) {
     m[11] = 0.0;
     
     m[12] = -(vpos.x * m[0] + vpos.y * m[4] + vpos.z * m[8]);
-    m[13] = -(vpos.x * m[1] + vpos.y * m[5] + vpos.z * m[9]);
+    m[13] = -(vpos.x * m[1] + vpos.y * m[5] + vpos.z * m[9]); 
     m[14] = -(vpos.x * m[2] + vpos.y * m[6] + vpos.z * m[10]);
     m[15] = 1.0;
 };
@@ -539,7 +539,7 @@ function createRenderTarget(w, h) {
         'width':w,
         'height':h,
         'sizeArray':new Float32Array([w, h, w / h]),
-        'dtxArray':new Float32Array([1.0 / w, 1.0 / h])
+        'dtxArray':new Float32Array([1.0 / w, 1.0 / h]) 
     };
     ret.frameBuffer = gl.createFramebuffer();
     ret.renderBuffer = gl.createRenderbuffer();
@@ -547,7 +547,7 @@ function createRenderTarget(w, h) {
     
     gl.bindTexture(gl.TEXTURE_2D, ret.texture);
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, w, h, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
-    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); 
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
@@ -691,7 +691,7 @@ BlossomParticle.prototype.setSize = function (s) {
     this.size = s;
 };
 
-BlossomParticle.prototype.update = function (dt, et) {
+BlossomParticle.prototype.update = function (dt, et) { 
     this.position[0] += this.velocity[0] * dt;
     this.position[1] += this.velocity[1] * dt;
     this.position[2] += this.velocity[2] * dt;
@@ -1118,7 +1118,7 @@ function renderScene() {
 
 /////
 function onResize(e) {
-    makeCanvasFullScreen(document.getElementById("sakura"));
+    makeCanvasFullScreen(document.getElementById("sakura")); 
     setViewports();
     if(sceneStandBy) {
         initScene();
@@ -1211,7 +1211,7 @@ window.addEventListener('load', function(e) {
     var st;
     document.addEventListener('visibilitychange',function(){
     if(document.hidden){
-    document.title="欢迎访问，小白のAI起始页?";
+    document.title="欢迎访问，小白のAI起始页"; 
     clearTimeout(st);
     console.log('hide');
     }else{
